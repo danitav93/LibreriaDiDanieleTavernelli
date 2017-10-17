@@ -76,7 +76,7 @@ public class WithFilteredListViewDialog extends Dialog {
         this.onQueryTextSubmitListener = onQueryTextSubmitListener;
     }
 
-    private interface OnQueryTextSubmitListener {
+    public interface OnQueryTextSubmitListener {
         public void onSubmit();
     }
 }
