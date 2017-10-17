@@ -38,7 +38,7 @@ public class WithFilteredListViewDialog extends Dialog {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.dialog_with_filtered_list_view);
         listView=(ListView) findViewById(R.id.dialog_with_filtered_list_viw_list_viw);
-        listView.setAdapter(new ArrayAdapter<>(context,R.layout.simple_string_item,items));
+        listView.setAdapter(new ArrayAdapter<>(context,R.layout.simple_string_item,R.id.simple_string_item_txt_viw,items));
 
         searchView = (SearchView) findViewById(R.id.dialog_with_filtered_list_viw_search_view);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
