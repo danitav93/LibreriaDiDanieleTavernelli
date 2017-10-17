@@ -70,7 +70,9 @@ public class WithFilteredListViewDialog extends Dialog {
 
     public void setItems(ArrayList<String> items) {
         this.items = items;
-        ((ArrayAdapter)listView.getAdapter()).notifyDataSetChanged();
+        if (listView!=null) {
+            ((ArrayAdapter) listView.getAdapter()).notifyDataSetChanged();
+        }
     }
 
     public void setOnQueryTextSubmitListener(OnQueryTextSubmitListener onQueryTextSubmitListener) {
