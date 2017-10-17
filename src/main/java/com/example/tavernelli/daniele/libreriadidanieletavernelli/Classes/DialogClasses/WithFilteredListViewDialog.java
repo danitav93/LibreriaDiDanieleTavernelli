@@ -24,6 +24,7 @@ public class WithFilteredListViewDialog extends Dialog {
     private ListView listView;
     private OnQueryTextSubmitListener onQueryTextSubmitListener;
     private boolean byList=false;
+    private SearchView searchView;
 
 
     public WithFilteredListViewDialog(@NonNull Context context) {
@@ -38,7 +39,7 @@ public class WithFilteredListViewDialog extends Dialog {
         listView=(ListView) findViewById(R.id.dialog_with_filtered_list_viw_list_viw);
         listView.setAdapter(new ArrayAdapter<>(context,R.layout.simple_string_item,items));
 
-        final SearchView searchView = (SearchView) findViewById(R.id.dialog_with_filtered_list_viw_search_view);
+        searchView = (SearchView) findViewById(R.id.dialog_with_filtered_list_viw_search_view);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -78,5 +79,9 @@ public class WithFilteredListViewDialog extends Dialog {
 
     public interface OnQueryTextSubmitListener {
         public void onSubmit();
+    }
+
+    public SearchView getSearchView() {
+        return searchView;
     }
 }
