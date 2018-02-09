@@ -31,6 +31,14 @@ public class IntentMethods {
         actualActivity.finish();
     }
 
+    //comincia una nuova activity inserendo degli argomenti e finendo l'attuale
+    public static void startActivityWithExtraFinishActual (Activity actualActivity, Class newActivity, String extraTag, Serializable extra) {
+        Intent intent = new Intent(actualActivity,newActivity);
+        intent.putExtra(extraTag,extra);
+        actualActivity.startActivity(intent);
+        actualActivity.finish();
+    }
+
 
 
 
