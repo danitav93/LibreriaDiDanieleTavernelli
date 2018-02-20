@@ -25,7 +25,7 @@ public class IntentMethods {
     }
 
     //comincia una nuova activity inserendo degli argomenti
-    public static void startActivityWithExtras (Activity actualActivity, Class newActivity, String[] extraTags, Serializable[] extras) throws Exception {
+    public static void startActivityWithExtras (Activity actualActivity, Class newActivity, String[] extraTags, Serializable[] extras) {
 
         Intent intent = new Intent(actualActivity,newActivity);
         for (int i=0;i<extraTags.length;i++) {
