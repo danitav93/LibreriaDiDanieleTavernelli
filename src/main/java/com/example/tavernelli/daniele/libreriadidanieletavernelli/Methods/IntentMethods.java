@@ -26,9 +26,7 @@ public class IntentMethods {
 
     //comincia una nuova activity inserendo degli argomenti
     public static void startActivityWithExtras (Activity actualActivity, Class newActivity, String[] extraTags, Serializable[] extras) throws Exception {
-        if (extraTags.length!=extras.length) {
-            throw new Error("Tags and serializable extras must have same size");
-        }
+
         Intent intent = new Intent(actualActivity,newActivity);
         for (int i=0;i<extraTags.length;i++) {
             intent.putExtra(extraTags[i],extras[i]);
